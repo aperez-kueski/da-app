@@ -1,0 +1,37 @@
+environment_config:
+  path: environment_config.dart
+  dotenv_path: .env
+  class: EnvironmentConfig
+
+  fields:
+    base_url:
+      default: 'https://google.com.mx'
+      config_field: TRUE
+    base_path:
+      default: 'action'
+      config_field: TRUE
+
+  extensions:
+    dev: #Enviroment
+      fields:
+        base_url:
+          default: 'https://testing.com'
+        base_path:
+          default: 'api-shared'
+        ignore_package:
+          default: TRUE
+
+      imports: # optional, adds set of imports to main configuration
+        - package:da_lib_staging/lib.dart
+
+    prod: #Enviroment
+      fields:
+        base_url:
+          default: 'https://production.com'
+        base_path:
+          default: 'api'
+        ignore_package:
+          default: TRUE
+
+      imports: # optional, adds set of imports to main configuration
+        - package:da_lib/lib.dart
