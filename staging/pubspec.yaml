@@ -1,27 +1,20 @@
-name: da_app
-description: A new Flutter project.
+name: da_lib
+description: Staging Flutter package project.
+version: 0.0.1
 publish_to: 'none'
-
-version: 1.0.0+1
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
+  flutter: ">=1.17.0"
 
 dependencies:
   flutter:
     sdk: flutter
 
-  cupertino_icons: ^1.0.2
-  da_lib:
-    path: staging/
-
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
   flutter_lints: ^1.0.0
 
 flutter:
-
-  uses-material-design: true
 
